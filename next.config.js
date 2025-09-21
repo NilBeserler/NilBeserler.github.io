@@ -15,7 +15,7 @@ const nextConfig = {
       },
     ],
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/YOUR_REPO_NAME' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/web' : '',
 }
 
 module.exports = nextConfig
