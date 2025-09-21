@@ -67,7 +67,7 @@ export default function Home() {
       }, 500)
       return () => clearTimeout(timeout)
     }
-  }, [currentIndex, fullText, showEmoji, showEndText])
+  }, [currentIndex, showEmoji, showEndText])
 
   useEffect(() => {
     if (showEndText && endIndex < endText.length) {
@@ -122,7 +122,7 @@ export default function Home() {
               <div className="mb-6" style={{ minHeight: '120px' }}>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-mono font-bold text-white whitespace-pre-line" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', minWidth: '600px' }}>
                   <span className="text-white">
-                    {displayedText}
+                    {displayedText || 'print("Hello World!\nI am Nil '}
                     {showEmoji && (
                       <span 
                         className="inline-block text-3xl md:text-4xl lg:text-5xl emoji" 
@@ -136,7 +136,7 @@ export default function Home() {
                         👋
                       </span>
                     )}
-                    {endDisplayedText}
+                    {endDisplayedText || '")'}
                     <span className="animate-pulse text-white">|</span>
                   </span>
                 </h1>
