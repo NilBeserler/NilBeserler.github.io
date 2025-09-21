@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Data Scientist Portfolio | Professional Portfolio',
+  title: 'Nil Beserler Portfolio | Data Science & Machine Learning',
   description: 'Professional portfolio showcasing data science projects, skills, and experience',
   keywords: 'data science, machine learning, portfolio, analytics, python, R',
   authors: [{ name: 'Nil Beserler' }],
@@ -21,13 +21,13 @@ export const metadata = {
     ],
   },
   openGraph: {
-    title: 'Data Scientist Portfolio',
+    title: 'Nil Beserler Portfolio',
     description: 'Professional portfolio showcasing data science projects, skills, and experience',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Data Scientist Portfolio',
+    title: 'Nil Beserler Portfolio',
     description: 'Professional portfolio showcasing data science projects, skills, and experience',
   },
 }
