@@ -6,7 +6,10 @@ import Footer from './components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Nil Beserler Portfolio',
+  title: {
+    default: 'Nil Beserler Portfolio',
+    template: '%s | Nil Beserler Portfolio',
+  },
   description: 'Professional portfolio showcasing data science projects, skills, and experience',
   keywords: 'data science, machine learning, portfolio, analytics, python, R',
   authors: [{ name: 'Nil Beserler' }],
