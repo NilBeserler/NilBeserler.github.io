@@ -5,9 +5,8 @@ import Head from 'next/head'
 
 export default function Resume() {
   const handleDownload = () => {
-    // In a real application, this would download the actual PDF file
     const link = document.createElement('a')
-    link.href = '/Nil Beserler Resume 2025.pdf' // Your actual resume PDF filename
+    link.href = '/Nil_Beserler_Resume.pdf'
     link.download = 'Nil_Beserler_Resume.pdf'
     link.click()
   }
@@ -15,7 +14,7 @@ export default function Resume() {
   return (
     <>
       <Head>
-        <title>Resume | Data Scientist Portfolio</title>
+        <title>Resume | Nil Beserler Portfolio</title>
         <meta name="description" content="Download my resume and view my professional experience, skills, and qualifications" />
       </Head>
       <div className="min-h-screen">
@@ -46,10 +45,10 @@ export default function Resume() {
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Nil Beserler</h2>
             <p className="text-xl text-primary-600 mb-4">Associate Data Scientist</p>
             <div className="flex flex-wrap justify-center gap-4 text-gray-600">
-              <div className="flex items-center">
+              <a href="mailto:nilbeserler@gmail.com" className="flex items-center hover:text-primary-600">
                 <FaEnvelope className="mr-2" />
                 nilbeserler@gmail.com
-              </div>
+              </a>
               <div className="flex items-center">
                 <FaMapMarkerAlt className="mr-2" />
                 San Diego, CA
@@ -83,26 +82,9 @@ export default function Resume() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-primary-200 pb-2">
               Technical Skills
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">Programming Languages</h4>
-                <ul className="text-gray-700 space-y-1">
-                  <li>• Python (Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch)</li>
-                  <li>• R (Statistical Analysis, Data Visualization)</li>
-                  <li>• SQL (Oracle Analytics Cloud, Data Processing)</li>
-                  <li>• JavaScript (D3.js, React)</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">Tools & Technologies</h4>
-                <ul className="text-gray-700 space-y-1">
-                  <li>• Machine Learning (Transformers, Ensemble Methods, Deep Learning)</li>
-                  <li>• NLP (LangChain, OpenAI Embeddings, Pinecone)</li>
-                  <li>• Cloud Platforms (Oracle Analytics Cloud)</li>
-                  <li>• Visualization (Matplotlib, Interactive Dashboards)</li>
-                </ul>
-              </div>
-            </div>
+            <p className="text-gray-700">
+              Python, Java, R, React, SQL, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Keras, PyTorch
+            </p>
           </div>
 
           {/* Professional Experience */}
@@ -117,14 +99,15 @@ export default function Resume() {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                   <div>
                     <h4 className="text-xl font-semibold text-gray-900">Associate Data Scientist</h4>
-                    <p className="text-lg text-primary-600">ICW Group</p>
+                    <p className="text-lg text-primary-600">ICW Group, San Diego</p>
                   </div>
                   <p className="text-gray-600 font-medium">November 2024 - Present</p>
                 </div>
                 <ul className="text-gray-700 space-y-2">
-                  <li>• Built a multi-model NLP system with transformers and ensemble methods to automate industry classification, improving accuracy through consensus-based scoring and robust data normalization</li>
-                  <li>• Optimized underwriting risk scoring models by refining feature weighting and scoring methodologies, improving risk differentiation across multiple lines of business and contributing to lower loss ratios</li>
-                  <li>• Increased model interpretability and stakeholder confidence by building comparison frameworks across model versions, integrating evaluation metrics, statistical analysis, and visual reporting</li>
+                  <li>• Built a multi-model NLP system using transformers, ensemble methods, TensorFlow, scikit-learn, and Python to automate industry classification, improving accuracy through consensus-based scoring and robust data normalization</li>
+                  <li>• Optimized underwriting risk scoring models using Python, PostgreSQL, and MySQL by refining feature weighting and scoring methodologies, enhancing risk differentiation across multiple lines of business and lowering loss ratios</li>
+                  <li>• Increased model interpretability and stakeholder confidence by building comparison frameworks across model versions, integrating evaluation metrics, statistical analysis, data visualization, and AWS-based workflows</li>
+                  <li>• Collaborated to convert PDF claims into structured data using Amazon SageMaker, achieving 96% classification accuracy to reduce manual effort, speed up quote turnaround times, and feed higher quality data into larger-scale prediction models</li>
                 </ul>
               </div>
 
@@ -133,7 +116,7 @@ export default function Resume() {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                   <div>
                     <h4 className="text-xl font-semibold text-gray-900">Data Science Intern</h4>
-                    <p className="text-lg text-primary-600">Oracle</p>
+                    <p className="text-lg text-primary-600">Oracle, Los Angeles</p>
                   </div>
                   <p className="text-gray-600 font-medium">June 2024 - October 2024</p>
                 </div>
@@ -148,8 +131,8 @@ export default function Resume() {
               <div className="border-l-4 border-primary-500 pl-6">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900">Break Through Tech AI Fellow</h4>
-                    <p className="text-lg text-primary-600">Accenture</p>
+                    <h4 className="text-xl font-semibold text-gray-900">Break Through Tech Artificial Intelligence Fellow</h4>
+                    <p className="text-lg text-primary-600">Accenture, Los Angeles</p>
                   </div>
                   <p className="text-gray-600 font-medium">August 2023 - April 2024</p>
                 </div>
@@ -165,13 +148,12 @@ export default function Resume() {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                   <div>
                     <h4 className="text-xl font-semibold text-gray-900">Machine Learning Tutor</h4>
-                    <p className="text-lg text-primary-600">Breakout Mentors</p>
+                    <p className="text-lg text-primary-600">Breakout Mentors, Remote</p>
                   </div>
                   <p className="text-gray-600 font-medium">September 2023 - June 2024</p>
                 </div>
                 <ul className="text-gray-700 space-y-2">
-                  <li>• Guided and inspired students in data science and ML, covered topics such as supervised learning, deep learning, and reinforcement learning to foster a passion for learning and practical application</li>
-                  <li>• Designed and implemented a hands-on curriculum emphasizing real-world problem-solving with modern data science tools like Pandas, NumPy, and Matplotlib, as well as deep learning frameworks such as PyTorch and TensorFlow</li>
+                  <li>• Guided and inspired students in data science and ML, covered topics such as supervised learning, deep learning, and reinforcement learning to foster a passion for learning and practical application. Utilized tools like Pandas, NumPy, and Matplotlib, as well as deep learning frameworks such as PyTorch and TensorFlow</li>
                   <li>• Collaborated with a student to build a financial literacy chatbot using Flowise and LangChain, embedding text data with OpenAI embeddings and storing them in Pinecone for effective similarity searches, enhancing query response accuracy and user experience</li>
                 </ul>
               </div>
@@ -181,13 +163,12 @@ export default function Resume() {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                   <div>
                     <h4 className="text-xl font-semibold text-gray-900">Research Assistant</h4>
-                    <p className="text-lg text-primary-600">Cognitive Tools Lab & Early Learning and Cognition Lab at UCSD</p>
+                    <p className="text-lg text-primary-600">Cognitive Tools Lab & Early Learning and Cognition Lab at UCSD, San Diego</p>
                   </div>
                   <p className="text-gray-600 font-medium">December 2021 - December 2022</p>
                 </div>
                 <ul className="text-gray-700 space-y-2">
-                  <li>• Spearheaded advanced image recognizability research, quantified by successfully comparing CLIP, VGG19, and human metrics through complex dataset wrangling and data visualization; using R and Python. Presented key findings to an audience of 20+ grad students, leading to a 25% improvement in comprehension of image recognizability metrics measured by poll ratings</li>
-                  <li>• Conducted thorough literature reviews on computer vision models, fostering innovation, and leading feedback-driven meetings to drive progress in cross-functional teams</li>
+                  <li>• Conducted image recognizability research by comparing CLIP, VGG19, and human perception metrics through dataset wrangling and data visualization in R and Python, and presented findings to 20+ graduate students, resulting in a 25% improvement in comprehension of image recognizability metrics</li>
                 </ul>
               </div>
             </div>
@@ -240,38 +221,19 @@ export default function Resume() {
             </div>
           </div>
 
-          {/* Projects Highlights */}
+          {/* Recent Projects */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-primary-200 pb-2">
-              Key Projects
+              Recent Projects
             </h3>
             <div className="space-y-4">
               <div className="p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-1">Fl(AI)shcards - AI-Driven Learning Assistant</h4>
-                <p className="text-gray-700 text-sm">
-                  Pioneered an AI-driven flashcard assistant using GPT-4 to transform learning for LIGN167 students. 
-                  Features automated flashcard creation, personalized study experience, and spaced repetition algorithm.
-                </p>
+                <h4 className="font-semibold text-gray-900 mb-1">Telecommunications disaster inquiry with Accenture</h4>
               </div>
               <div className="p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-1">Advanced AI for Biodiversity: Plant Specimen Classification</h4>
+                <h4 className="font-semibold text-gray-900 mb-1">Part of speech tagging using structural models</h4>
                 <p className="text-gray-700 text-sm">
-                  Developed ML models for categorizing 7.8M+ plant specimens at NYBG. Implemented VGG and ResNet50 
-                  architectures, achieving 0.9676 accuracy and securing 22nd place out of 77 teams.
-                </p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-1">Telecommunications Disaster Impact Analysis</h4>
-                <p className="text-gray-700 text-sm">
-                  Collaborated with Accenture to analyze natural disaster impact on cellular towers across the US. 
-                  Used unsupervised learning (K-Means, DBSCAN) and PCA for disaster preparedness strategies.
-                </p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-1">Predicting Hospital Discharge Type for Diabetes Patients</h4>
-                <p className="text-gray-700 text-sm">
-                  Analyzed 100K+ hospital admissions to predict discharge processes for diabetes patients. 
-                  Applied Gradient Boosting and other ML techniques, achieving 82% accuracy.
+                  Structural SVM, Hidden Markov Model, and Conditional Random Fields
                 </p>
               </div>
             </div>

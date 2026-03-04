@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-lg font-semibold mb-4">Data Scientist Portfolio</h3>
+            <h3 className="text-lg font-semibold mb-4">Nil Beserler Portfolio</h3>
             <p className="text-gray-300 text-sm">
               Transforming data into actionable insights through machine learning and analytics.
             </p>

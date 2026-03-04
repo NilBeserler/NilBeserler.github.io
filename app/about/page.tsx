@@ -2,7 +2,7 @@ import { FaPython, FaRProject, FaDatabase, FaChartBar, FaBrain, FaCode, FaJs, Fa
 import { SiTensorflow, SiPytorch, SiAmazonaws, SiStreamlit, SiOpenai, SiPandas, SiNumpy, SiScikitlearn, SiJupyter, SiGit, SiGithub, SiOracle } from 'react-icons/si'
 
 export const metadata = {
-  title: 'About | Data Scientist Portfolio',
+  title: 'About | Nil Beserler Portfolio',
   description: 'Learn about my background, skills, and experience in data science and machine learning',
 }
 

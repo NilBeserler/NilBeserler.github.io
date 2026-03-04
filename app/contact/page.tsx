@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa'
 
 export default function Contact() {
@@ -28,6 +29,18 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-50 to-blue-100 section-padding">
         <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden ring-4 ring-white shadow-lg">
+              <Image
+                src="/images/profile.png"
+                alt="Nil Beserler"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 10rem, 12rem"
+                priority
+              />
+            </div>
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Get In Touch
           </h1>
