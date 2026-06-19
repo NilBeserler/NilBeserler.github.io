@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 const COLORS = ['#38e1d6', '#5b8cff', '#b07cff', '#ffc36b', '#5fe6da', '#8fb4ff', '#c79bff']
@@ -8,8 +8,15 @@ const SG = "var(--font-space-grotesk), 'Space Grotesk', sans-serif"
 const JB = "var(--font-jetbrains-mono), 'JetBrains Mono', monospace"
 
 export default function Home() {
-  const rootRef      = useRef<HTMLDivElement>(null)
+  const rootRef       = useRef<HTMLDivElement>(null)
   const heroCanvasRef = useRef<HTMLCanvasElement>(null)
+  const [copied, setCopied] = useState(false)
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('nilbeserler@gmail.com')
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   /* ---- canvas particle animation ---- */
   useEffect(() => {
@@ -442,10 +449,10 @@ export default function Home() {
             Open to data science &amp; ML collaborations, and genuinely hard problems. Let&apos;s talk.
           </p>
           <div data-reveal="160" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, flexWrap: 'wrap' }}>
-            <a href="mailto:nilbeserler@gmail.com" data-magnetic
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '16px 30px', borderRadius: 999, background: 'linear-gradient(150deg,#38e1d6,#5b8cff)', color: '#06121f', fontWeight: 700, fontSize: 16 }}>
-              get in touch <span style={{ fontSize: 18 }}>→</span>
-            </a>
+            <button data-magnetic onClick={copyEmail}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '16px 30px', borderRadius: 999, background: 'linear-gradient(150deg,#38e1d6,#5b8cff)', color: '#06121f', fontWeight: 700, fontSize: 16, border: 'none', cursor: 'pointer', transition: 'opacity .2s' }}>
+              {copied ? 'email copied ✓' : <>get in touch <span style={{ fontSize: 18 }}>→</span></>}
+            </button>
             <div style={{ display: 'flex', gap: 10 }}>
               <a href="https://github.com/NilBeserler" target="_blank" rel="noopener noreferrer"
                 className="social-link"
