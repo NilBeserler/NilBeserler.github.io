@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 const COLORS = ['#38e1d6', '#5b8cff', '#b07cff', '#ffc36b', '#5fe6da', '#8fb4ff', '#c79bff']
-const SG = "var(--font-space-grotesk), 'Space Grotesk', sans-serif"
-const JB = "var(--font-jetbrains-mono), 'JetBrains Mono', monospace"
+const SG = "'Space Grotesk', sans-serif"
+const JB = "'JetBrains Mono', monospace"
 
 export default function Home() {
   const rootRef       = useRef<HTMLDivElement>(null)
