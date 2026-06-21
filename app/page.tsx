@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { SiPython, SiPytorch, SiTensorflow, SiScikitlearn, SiPandas, SiAmazonaws, SiDocker, SiPostgresql, SiSnowflake } from 'react-icons/si'
+import { FaDatabase, FaBrain, FaLink, FaChartBar, FaCube } from 'react-icons/fa'
 
 const COLORS = ['#38e1d6', '#5b8cff', '#b07cff', '#ffc36b', '#5fe6da', '#8fb4ff', '#c79bff']
 const SG = "'Space Grotesk', sans-serif"
@@ -320,8 +322,25 @@ export default function Home() {
                 ))}
               </div>
               <div data-reveal="240" style={{ display: 'flex', gap: 9, marginTop: 34, flexWrap: 'wrap', maxWidth: 580 }}>
-                {['Python','SQL','PyTorch','TensorFlow','scikit-learn','Hugging Face','LangChain','Pandas','AWS','SageMaker','Docker','PostgreSQL','Snowflake','SHAP'].map(tag => (
-                  <span key={tag} className="skill-tag" style={{ fontFamily: JB, fontSize: 13, color: '#bcd0ee', padding: '7px 13px', borderRadius: 999, background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.1)', transition: 'all .2s' }}>{tag}</span>
+                {([
+                  { name: 'Python',       Icon: SiPython },
+                  { name: 'SQL',          Icon: FaDatabase },
+                  { name: 'PyTorch',      Icon: SiPytorch },
+                  { name: 'TensorFlow',   Icon: SiTensorflow },
+                  { name: 'scikit-learn', Icon: SiScikitlearn },
+                  { name: 'Hugging Face', Icon: FaBrain },
+                  { name: 'LangChain',    Icon: FaLink },
+                  { name: 'Pandas',       Icon: SiPandas },
+                  { name: 'AWS',          Icon: SiAmazonaws },
+                  { name: 'SageMaker',    Icon: FaCube },
+                  { name: 'Docker',       Icon: SiDocker },
+                  { name: 'PostgreSQL',   Icon: SiPostgresql },
+                  { name: 'Snowflake',    Icon: SiSnowflake },
+                  { name: 'SHAP',         Icon: FaChartBar },
+                ] as { name: string; Icon: React.ElementType }[]).map(({ name, Icon }) => (
+                  <span key={name} className="skill-tag" style={{ fontFamily: JB, fontSize: 13, color: '#bcd0ee', padding: '7px 13px', borderRadius: 999, background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.1)', transition: 'all .2s', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                    <Icon style={{ fontSize: 14, flexShrink: 0 }} />{name}
+                  </span>
                 ))}
               </div>
             </div>
