@@ -229,11 +229,11 @@ export default function Home() {
     }
 
     const onScroll = () => {
-      const trigger = window.scrollY + window.innerHeight * 0.35
+      const trigger = window.innerHeight * 0.4
       let activeId = ''
       for (const id of sections) {
         const el = root.querySelector(`#${id}`) as HTMLElement | null
-        if (el && el.offsetTop <= trigger) activeId = '#' + id
+        if (el && el.getBoundingClientRect().top <= trigger) activeId = '#' + id
       }
       if (activeId) setActive(activeId)
       else navLinks.forEach(link => {
