@@ -483,7 +483,7 @@ export default function Home() {
           <div data-reveal="160" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, flexWrap: 'wrap' }}>
             <button data-magnetic onClick={copyEmail}
               style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '16px 30px', borderRadius: 999, background: 'linear-gradient(150deg,#38e1d6,#5b8cff)', color: '#06121f', fontWeight: 700, fontSize: 16, border: 'none', cursor: 'pointer', transition: 'opacity .2s' }}>
-              {copied ? 'email copied ✓' : <>get in touch <span style={{ fontSize: 18 }}>→</span></>}
+              {copied ? 'email copied ✓' : 'get in touch'}
             </button>
             <a href="/Nil_Beserler_Resume.pdf" download="Resume_NilBeserler.pdf"
               className="social-link"
