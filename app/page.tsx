@@ -485,6 +485,11 @@ export default function Home() {
               style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '16px 30px', borderRadius: 999, background: 'linear-gradient(150deg,#38e1d6,#5b8cff)', color: '#06121f', fontWeight: 700, fontSize: 16, border: 'none', cursor: 'pointer', transition: 'opacity .2s' }}>
               {copied ? 'email copied ✓' : <>get in touch <span style={{ fontSize: 18 }}>→</span></>}
             </button>
+            <a href="/Nil_Beserler_Resume.pdf" download="Resume_NilBeserler.pdf"
+              className="social-link"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '16px 28px', borderRadius: 999, border: '1px solid rgba(255,255,255,.2)', color: '#dfe7f5', fontWeight: 600, fontSize: 16, transition: 'all .2s' }}>
+              resume ↓
+            </a>
             <div style={{ display: 'flex', gap: 10 }}>
               <a href="https://github.com/NilBeserler" target="_blank" rel="noopener noreferrer"
                 className="social-link"
