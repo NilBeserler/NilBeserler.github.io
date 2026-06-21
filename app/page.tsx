@@ -217,6 +217,8 @@ export default function Home() {
   useEffect(() => {
     const root = rootRef.current; if (!root) return
     const navLinks = root.querySelectorAll('a[href^="#about"],a[href^="#experience"],a[href^="#work"],a[href^="#contact"]')
+    const sections = ['about', 'experience', 'work', 'contact']
+
     const setActive = (id: string) => {
       navLinks.forEach(link => {
         const isActive = link.getAttribute('href') === id
@@ -225,13 +227,24 @@ export default function Home() {
         el.style.background = isActive ? 'rgba(255,255,255,.1)' : ''
       })
     }
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(en => { if (en.isIntersecting) setActive('#' + en.target.id) })
-    }, { threshold: 0.25, rootMargin: '-10% 0px -60% 0px' })
-    ;['about','experience','work','contact'].forEach(id => {
-      const el = root.querySelector(`#${id}`); if (el) io.observe(el)
-    })
-    return () => io.disconnect()
+
+    const onScroll = () => {
+      const trigger = window.scrollY + window.innerHeight * 0.35
+      let activeId = ''
+      for (const id of sections) {
+        const el = root.querySelector(`#${id}`) as HTMLElement | null
+        if (el && el.offsetTop <= trigger) activeId = '#' + id
+      }
+      if (activeId) setActive(activeId)
+      else navLinks.forEach(link => {
+        const el = link as HTMLElement
+        el.style.color = '#aeb9cf'; el.style.background = ''
+      })
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   /* ------------------------------------------------------------------ */
