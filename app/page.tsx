@@ -258,7 +258,7 @@ export default function Home() {
       <div className="nav-pill" style={{ position: 'fixed', top: 24, left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', gap: 22, padding: '9px 14px 9px 11px', borderRadius: 999, background: 'rgba(16,20,30,.55)', backdropFilter: 'blur(14px)', border: '1px solid rgba(255,255,255,.12)', zIndex: 50 }}>
         <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'linear-gradient(150deg,#38e1d6,#5b8cff)', color: '#06121f', fontWeight: 700, fontSize: 12, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>NB</div>
-          <span style={{ fontWeight: 700, color: '#eaf1ff' }}>nil</span>
+          <span className="nav-brand-label" style={{ fontWeight: 700, color: '#eaf1ff' }}>nil</span>
         </a>
         <div className="nav-links" style={{ display: 'flex', gap: 2, paddingRight: 4 }}>
           {['about', 'experience', 'work', 'contact'].map(l => (

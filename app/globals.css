@@ -71,8 +71,9 @@
 /* ---- mobile ---- */
 @media (max-width: 768px) {
   /* Nav */
-  .nav-pill { gap: 8px !important; padding: 7px 10px 7px 8px !important; top: 14px !important; }
-  .nav-links { display: none !important; }
+  .nav-pill { gap: 6px !important; padding: 6px 8px 6px 7px !important; top: 12px !important; }
+  .nav-brand-label { display: none !important; }
+  .nav-link { padding: 5px 8px !important; font-size: 12px !important; }
 
   /* Hero */
   .hero-text { left: 24px !important; right: 24px !important; max-width: none !important; }
