@@ -240,12 +240,12 @@ export default function Home() {
     <div ref={rootRef} style={{ background: '#0b0d14', color: '#eaf1ff', fontFamily: SG, overflowX: 'hidden' }}>
 
       {/* ============ NAV ============ */}
-      <div style={{ position: 'fixed', top: 24, left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', gap: 22, padding: '9px 14px 9px 11px', borderRadius: 999, background: 'rgba(16,20,30,.55)', backdropFilter: 'blur(14px)', border: '1px solid rgba(255,255,255,.12)', zIndex: 50 }}>
+      <div className="nav-pill" style={{ position: 'fixed', top: 24, left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', gap: 22, padding: '9px 14px 9px 11px', borderRadius: 999, background: 'rgba(16,20,30,.55)', backdropFilter: 'blur(14px)', border: '1px solid rgba(255,255,255,.12)', zIndex: 50 }}>
         <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'linear-gradient(150deg,#38e1d6,#5b8cff)', color: '#06121f', fontWeight: 700, fontSize: 12, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>NB</div>
           <span style={{ fontWeight: 700, color: '#eaf1ff' }}>nil</span>
         </a>
-        <div style={{ display: 'flex', gap: 2, paddingRight: 4 }}>
+        <div className="nav-links" style={{ display: 'flex', gap: 2, paddingRight: 4 }}>
           {['about', 'experience', 'work', 'contact'].map(l => (
             <a key={l} href={`#${l}`} className="nav-link" style={{ fontWeight: 500, color: '#aeb9cf', padding: '6px 11px', borderRadius: 999, transition: 'color .2s, background .2s' }}>{l}</a>
           ))}
@@ -255,13 +255,13 @@ export default function Home() {
       {/* ============ HERO ============ */}
       <section id="top" style={{ position: 'relative', width: '100%', height: '100vh', minHeight: 780, overflow: 'hidden', background: 'radial-gradient(120% 95% at 76% 16%,#16223b 0%,#0b0d14 60%)', cursor: 'crosshair' }}>
         <canvas ref={heroCanvasRef} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' }} />
-        <div style={{ position: 'absolute', left: '8.5%', top: '50%', transform: 'translateY(-50%)', maxWidth: 900, zIndex: 2, pointerEvents: 'none' }}>
-          <div style={{ fontSize: 24, fontWeight: 500, color: '#7fe9df', marginBottom: 18 }}>hi, i&apos;m nil 👋</div>
-          <div style={{ fontSize: 66, lineHeight: 1.06, fontWeight: 600, color: '#f3f7ff', letterSpacing: '-.025em' }}>
+        <div className="hero-text" style={{ position: 'absolute', left: '8.5%', top: '50%', transform: 'translateY(-50%)', maxWidth: 900, zIndex: 2, pointerEvents: 'none' }}>
+          <div className="hero-greeting" style={{ fontSize: 24, fontWeight: 500, color: '#7fe9df', marginBottom: 18 }}>hi, i&apos;m nil 👋</div>
+          <div className="hero-heading" style={{ fontSize: 66, lineHeight: 1.06, fontWeight: 600, color: '#f3f7ff', letterSpacing: '-.025em' }}>
             i build, ship, and explain ML systems that turn data into <span style={{ color: '#7fb0ff' }}>decisions</span>
           </div>
           <div style={{ marginTop: 26 }}>
-            <span style={{ fontSize: 19, color: '#c2cee2' }}>Associate Data Scientist <span style={{ color: '#5b6680' }}>@</span> ICW Group</span>
+            <span className="hero-sub" style={{ fontSize: 19, color: '#c2cee2' }}>Associate Data Scientist <span style={{ color: '#5b6680' }}>@</span> ICW Group</span>
           </div>
         </div>
         <div style={{ position: 'absolute', left: '50%', bottom: 30, transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, zIndex: 2, pointerEvents: 'none' }}>
@@ -271,12 +271,12 @@ export default function Home() {
       </section>
 
       {/* ============ ABOUT ============ */}
-      <section id="about" style={{ position: 'relative', padding: '150px 0', borderTop: '1px solid rgba(255,255,255,.07)' }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 48px' }}>
+      <section id="about" className="section-about" style={{ position: 'relative', padding: '150px 0', borderTop: '1px solid rgba(255,255,255,.07)' }}>
+        <div className="section-inner" style={{ maxWidth: 1180, margin: '0 auto', padding: '0 48px' }}>
           <SectionLabel text="ABOUT" />
-          <div style={{ display: 'grid', gridTemplateColumns: '0.82fr 1.18fr', gap: 64, alignItems: 'center' }}>
+          <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '0.82fr 1.18fr', gap: 64, alignItems: 'center' }}>
             {/* portrait */}
-            <div data-reveal="80" style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 22, overflow: 'hidden', border: '1.5px solid rgba(127,233,223,.28)', background: '#0b0d14' }}>
+            <div data-reveal="80" className="about-portrait" style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 22, overflow: 'hidden', border: '1.5px solid rgba(127,233,223,.28)', background: '#0b0d14' }}>
               <Image src="/images/profile-nobg.png" alt="Nil Beserler" fill sizes="(max-width: 1180px) 40vw, 480px" style={{ objectFit: 'cover', objectPosition: 'center 18%', filter: 'brightness(0.88) saturate(0.82)' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, transparent 55%, rgba(11,13,20,.7) 100%)', pointerEvents: 'none' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(11,13,20,.18) 0%,transparent 30%,transparent 62%,rgba(11,13,20,.65) 100%)', pointerEvents: 'none' }} />
@@ -287,8 +287,8 @@ export default function Home() {
             </div>
             {/* bio */}
             <div>
-              <h2 data-reveal="60" style={{ margin: 0, fontSize: 46, lineHeight: 1.12, fontWeight: 600, letterSpacing: '-.02em', color: '#f3f7ff' }}>the person behind the models</h2>
-              <p data-reveal="120" style={{ margin: '26px 0 0', fontSize: 20, lineHeight: 1.6, color: '#aab6cc', maxWidth: 580 }}>
+              <h2 data-reveal="60" className="about-h2" style={{ margin: 0, fontSize: 46, lineHeight: 1.12, fontWeight: 600, letterSpacing: '-.02em', color: '#f3f7ff' }}>the person behind the models</h2>
+              <p data-reveal="120" className="about-p" style={{ margin: '26px 0 0', fontSize: 20, lineHeight: 1.6, color: '#aab6cc', maxWidth: 580 }}>
                 I&apos;m a data scientist working at the intersection of machine learning, statistics, and analytics. Today I build loss-prediction systems and NLP pipelines at ICW Group. Before that I trained computer-vision models on plant specimens, clustered disaster impact on telecom networks with Accenture, and shipped analytics dashboards at Oracle.
               </p>
               <p data-reveal="160" style={{ margin: '18px 0 0', fontSize: 20, lineHeight: 1.6, color: '#aab6cc', maxWidth: 580 }}>
@@ -318,7 +318,7 @@ export default function Home() {
 
       {/* ============ STATS ============ */}
       <section style={{ borderTop: '1px solid rgba(255,255,255,.07)', borderBottom: '1px solid rgba(255,255,255,.07)' }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '78px 48px', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 32 }}>
+        <div className="stats-grid" style={{ maxWidth: 1180, margin: '0 auto', padding: '78px 48px', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 32 }}>
           {[
             { count: 2,   suffix: '+', label: 'years of experience' },
             { count: 260, suffix: '+', label: 'features engineered · WEFI' },
@@ -326,7 +326,7 @@ export default function Home() {
             { count: 8,   suffix: '',  label: 'shipped projects' },
           ].map(({ count, suffix, label }, i) => (
             <div key={label} data-reveal={i * 80}>
-              <div style={{ fontSize: 56, fontWeight: 600, letterSpacing: '-.02em', color: '#f3f7ff' }}>
+              <div className="stat-num" style={{ fontSize: 56, fontWeight: 600, letterSpacing: '-.02em', color: '#f3f7ff' }}>
                 <span data-count={count} data-suffix={suffix}>{count}{suffix}</span>
               </div>
               <div style={{ fontFamily: JB, fontSize: 13, color: '#7e8aa3', marginTop: 8 }}>{label}</div>
@@ -336,14 +336,14 @@ export default function Home() {
       </section>
 
       {/* ============ EXPERIENCE ============ */}
-      <section id="experience" style={{ position: 'relative', padding: '140px 0', background: 'radial-gradient(80% 60% at 50% 0%,rgba(40,60,100,.14),transparent)', borderTop: '1px solid rgba(255,255,255,.07)' }}>
-        <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 48px' }}>
+      <section id="experience" className="section-experience" style={{ position: 'relative', padding: '140px 0', background: 'radial-gradient(80% 60% at 50% 0%,rgba(40,60,100,.14),transparent)', borderTop: '1px solid rgba(255,255,255,.07)' }}>
+        <div className="section-inner" style={{ maxWidth: 1000, margin: '0 auto', padding: '0 48px' }}>
           <SectionLabel text="EXPERIENCE" />
-          <h2 data-reveal="40" style={{ margin: '0 0 52px', fontSize: 46, fontWeight: 600, letterSpacing: '-.02em', color: '#f3f7ff' }}>where i&apos;ve worked</h2>
+          <h2 data-reveal="40" className="exp-h2" style={{ margin: '0 0 52px', fontSize: 46, fontWeight: 600, letterSpacing: '-.02em', color: '#f3f7ff' }}>where i&apos;ve worked</h2>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             {JOBS.map(({ badge, date, location, title, company, desc, delay }) => (
-              <div key={company} data-reveal={delay} className="exp-card" style={{ display: 'grid', gridTemplateColumns: '210px 1fr', gap: 28, padding: 28, borderRadius: 18, border: '1px solid rgba(255,255,255,.09)', background: 'rgba(255,255,255,.035)', transition: 'background .3s, border-color .3s' }}>
+              <div key={company} data-reveal={delay} className="exp-card exp-card-grid" style={{ display: 'grid', gridTemplateColumns: '210px 1fr', gap: 28, padding: 28, borderRadius: 18, border: '1px solid rgba(255,255,255,.09)', background: 'rgba(255,255,255,.035)', transition: 'background .3s, border-color .3s' }}>
                 <div>
                   {badge && (
                     <div style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: JB, fontSize: 12, color: '#7fe9df', marginBottom: 8 }}>
@@ -375,25 +375,25 @@ export default function Home() {
       </section>
 
       {/* ============ WORK ============ */}
-      <section id="work" style={{ position: 'relative', padding: '130px 0 140px', borderTop: '1px solid rgba(255,255,255,.07)' }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 48px' }}>
+      <section id="work" className="section-work" style={{ position: 'relative', padding: '130px 0 140px', borderTop: '1px solid rgba(255,255,255,.07)' }}>
+        <div className="section-inner" style={{ maxWidth: 1180, margin: '0 auto', padding: '0 48px' }}>
           <SectionLabel text="SELECTED WORK" />
-          <h2 data-reveal="40" style={{ margin: '0 0 52px', fontSize: 46, fontWeight: 600, letterSpacing: '-.02em', color: '#f3f7ff' }}>things i&apos;ve built</h2>
+          <h2 data-reveal="40" className="work-h2" style={{ margin: '0 0 52px', fontSize: 46, fontWeight: 600, letterSpacing: '-.02em', color: '#f3f7ff' }}>things i&apos;ve built</h2>
 
           {/* featured */}
           <a href="https://github.com/NilBeserler/rag-playbook" target="_blank" rel="noopener noreferrer"
             data-spotlight data-reveal="80"
-            className="project-card project-card-featured"
+            className="project-card project-card-featured featured-card"
             style={{ position: 'relative', display: 'grid', gridTemplateColumns: '1.1fr 1fr', borderRadius: 24, overflow: 'hidden', border: '1px solid rgba(255,255,255,.1)', background: 'rgba(255,255,255,.03)', marginBottom: 24, transition: 'transform .35s, border-color .35s' }}>
             <GlowOrb color="rgba(127,233,223,.16)" />
-            <div style={{ overflow: 'hidden', position: 'relative', zIndex: 2, minHeight: 360 }}>
+            <div className="featured-img" style={{ overflow: 'hidden', position: 'relative', zIndex: 2, minHeight: 360 }}>
               <Image src="/rag-hero.jpg" alt="RAG Optimization Playbook" fill style={{ objectFit: 'cover', objectPosition: 'center 20%', transform: 'scale(1.12)', transformOrigin: 'center 30%' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,.35)', pointerEvents: 'none' }} />
               <span style={{ position: 'absolute', top: 16, right: 16, fontFamily: JB, fontSize: 11, color: '#06121f', background: '#7fe9df', padding: '6px 13px', borderRadius: 999, fontWeight: 600, zIndex: 1 }}>NEW · 2026</span>
             </div>
-            <div style={{ padding: '48px 44px', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', zIndex: 2 }}>
+            <div className="featured-body" style={{ padding: '48px 44px', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', zIndex: 2 }}>
               <div style={{ fontFamily: JB, fontSize: 12, letterSpacing: '.14em', color: '#7fe9df', marginBottom: 16 }}>FEATURED · RAG · LLM · AI ENGINEERING</div>
-              <h3 style={{ margin: '0 0 14px', fontSize: 32, fontWeight: 600, color: '#f3f7ff', letterSpacing: '-.02em' }}>RAG Optimization Playbook</h3>
+              <h3 className="featured-h3" style={{ margin: '0 0 14px', fontSize: 32, fontWeight: 600, color: '#f3f7ff', letterSpacing: '-.02em' }}>RAG Optimization Playbook</h3>
               <p style={{ margin: '0 0 24px', fontSize: 17, lineHeight: 1.6, color: '#9aa6bd' }}>
                 A practitioner&apos;s reference for diagnosing and fixing production RAG systems — retrieval quality, agentic reasoning, reliability, scale, and eval pipelines. Each entry maps symptom → fix with tradeoffs and eval signals.
               </p>
@@ -403,7 +403,7 @@ export default function Home() {
           </a>
 
           {/* grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+          <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             {PROJECTS.map(({ href, img, alt, category, categoryColor, title, desc, tags, link, glowColor, cardClass, delay }) => (
               <a key={title} href={href} target="_blank" rel="noopener noreferrer"
                 data-spotlight data-reveal={delay}
@@ -435,17 +435,17 @@ export default function Home() {
       </section>
 
       {/* ============ CONTACT ============ */}
-      <section id="contact" style={{ position: 'relative', padding: '170px 0', overflow: 'hidden', background: 'radial-gradient(100% 90% at 50% 100%,#16223b 0%,#0b0d14 62%)', borderTop: '1px solid rgba(255,255,255,.07)' }}>
-        <div style={{ position: 'relative', zIndex: 2, maxWidth: 900, margin: '0 auto', padding: '0 48px', textAlign: 'center' }}>
+      <section id="contact" className="section-contact" style={{ position: 'relative', padding: '170px 0', overflow: 'hidden', background: 'radial-gradient(100% 90% at 50% 100%,#16223b 0%,#0b0d14 62%)', borderTop: '1px solid rgba(255,255,255,.07)' }}>
+        <div className="section-inner" style={{ position: 'relative', zIndex: 2, maxWidth: 900, margin: '0 auto', padding: '0 48px', textAlign: 'center' }}>
           <div data-reveal="0" style={{ display: 'inline-flex', alignItems: 'center', gap: 14, marginBottom: 26 }}>
             <span style={{ width: 24, height: 1, background: 'linear-gradient(90deg,transparent,#38e1d6)' }} />
             <span style={{ fontFamily: JB, fontSize: 13, letterSpacing: '.22em', color: '#5fe6da' }}>CONTACT</span>
             <span style={{ width: 24, height: 1, background: 'linear-gradient(90deg,#38e1d6,transparent)' }} />
           </div>
-          <h2 data-reveal="60" style={{ margin: 0, fontSize: 60, lineHeight: 1.06, fontWeight: 600, letterSpacing: '-.025em', color: '#f3f7ff' }}>
+          <h2 data-reveal="60" className="contact-h2" style={{ margin: 0, fontSize: 60, lineHeight: 1.06, fontWeight: 600, letterSpacing: '-.025em', color: '#f3f7ff' }}>
             let&apos;s turn your data into <span style={{ color: '#7fb0ff' }}>decisions</span>
           </h2>
-          <p data-reveal="120" style={{ margin: '24px auto 44px', fontSize: 20, lineHeight: 1.6, color: '#aab6cc', maxWidth: 540 }}>
+          <p data-reveal="120" className="contact-p" style={{ margin: '24px auto 44px', fontSize: 20, lineHeight: 1.6, color: '#aab6cc', maxWidth: 540 }}>
             Open to data science &amp; ML collaborations, and genuinely hard problems. Let&apos;s talk.
           </p>
           <div data-reveal="160" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, flexWrap: 'wrap' }}>
@@ -471,9 +471,9 @@ export default function Home() {
 
       {/* ============ FOOTER ============ */}
       <footer style={{ borderTop: '1px solid rgba(255,255,255,.07)' }}>
-        <div style={{ maxWidth: 1180, margin: '0 auto', padding: '36px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 18 }}>
+        <div className="footer-inner" style={{ maxWidth: 1180, margin: '0 auto', padding: '36px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 18 }}>
           <div style={{ fontWeight: 700, color: '#e7eefc' }}>nil beserler <span style={{ color: '#6b7691', fontWeight: 500 }}>— data scientist</span></div>
-          <div style={{ display: 'flex', gap: 22 }}>
+          <div className="footer-links" style={{ display: 'flex', gap: 22 }}>
             {['about', 'experience', 'work', 'contact'].map(l => (
               <a key={l} href={`#${l}`} className="footer-link" style={{ fontSize: 14, color: '#8b96ad', transition: 'color .2s' }}>{l}</a>
             ))}

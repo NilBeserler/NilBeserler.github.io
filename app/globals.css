@@ -67,3 +67,53 @@
 .footer-link:hover  { color: #eaf1ff !important; }
 .social-link:hover  { background: rgba(255,255,255,.07) !important; border-color: rgba(255,255,255,.3) !important; }
 .see-all-btn:hover  { color: #eaf1ff !important; border-color: rgba(255,255,255,.32) !important; background: rgba(255,255,255,.04) !important; }
+
+/* ---- mobile ---- */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav-pill { gap: 8px !important; padding: 7px 10px 7px 8px !important; top: 14px !important; }
+  .nav-links { display: none !important; }
+
+  /* Hero */
+  .hero-text { left: 24px !important; right: 24px !important; max-width: none !important; }
+  .hero-heading { font-size: 36px !important; line-height: 1.1 !important; }
+  .hero-sub { font-size: 16px !important; }
+  .hero-greeting { font-size: 18px !important; margin-bottom: 14px !important; }
+
+  /* Section inner containers */
+  .section-inner { padding: 0 24px !important; }
+
+  /* About */
+  .section-about { padding: 80px 0 !important; }
+  .about-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .about-portrait { max-width: 320px !important; margin: 0 auto !important; width: 100% !important; }
+  .about-h2 { font-size: 32px !important; }
+  .about-p { font-size: 17px !important; }
+
+  /* Stats */
+  .stats-grid { grid-template-columns: 1fr 1fr !important; padding: 52px 24px !important; gap: 36px !important; }
+  .stat-num { font-size: 40px !important; }
+
+  /* Experience */
+  .section-experience { padding: 80px 0 !important; }
+  .exp-h2 { font-size: 32px !important; margin-bottom: 32px !important; }
+  .exp-card-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
+
+  /* Work */
+  .section-work { padding: 80px 0 90px !important; }
+  .work-h2 { font-size: 32px !important; margin-bottom: 32px !important; }
+  .featured-card { grid-template-columns: 1fr !important; }
+  .featured-img { min-height: 220px !important; }
+  .featured-body { padding: 28px 24px !important; }
+  .featured-h3 { font-size: 24px !important; }
+  .projects-grid { grid-template-columns: 1fr !important; }
+
+  /* Contact */
+  .section-contact { padding: 90px 0 !important; }
+  .contact-h2 { font-size: 36px !important; }
+  .contact-p { font-size: 17px !important; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; padding: 28px 24px !important; }
+  .footer-links { flex-wrap: wrap !important; gap: 14px !important; }
+}
