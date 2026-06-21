@@ -307,7 +307,7 @@ export default function Home() {
                 I&apos;m a data scientist working at the intersection of machine learning, statistics, and analytics. Today I build loss-prediction systems and NLP pipelines at ICW Group. Before that I trained computer-vision models on plant specimens, clustered disaster impact on telecom networks with Accenture, and shipped analytics dashboards at Oracle.
               </p>
               <p data-reveal="160" style={{ margin: '18px 0 0', fontSize: 20, lineHeight: 1.6, color: '#aab6cc', maxWidth: 580 }}>
-                I care about models that make it to production — and decisions people can actually act on.
+                I care about models that make it to production - and decisions people can actually act on.
               </p>
               <div data-reveal="200" style={{ display: 'flex', gap: 40, marginTop: 38, flexWrap: 'wrap' }}>
                 {[
@@ -399,7 +399,7 @@ export default function Home() {
           <div data-reveal="120" style={{ marginTop: 18, display: 'flex', alignItems: 'center', gap: 14, padding: '22px 28px', borderRadius: 18, border: '1px dashed rgba(255,255,255,.14)', background: 'rgba(255,255,255,.02)' }}>
             <span style={{ fontFamily: JB, fontSize: 12, letterSpacing: '.14em', color: '#5fe6da' }}>EDU</span>
             <span style={{ fontSize: 15, color: '#cdd7e8' }}>
-              B.S. Cognitive Science — Machine Learning &amp; Neural Computation,{' '}
+              B.S. Cognitive Science - Machine Learning &amp; Neural Computation,{' '}
               <span style={{ color: '#8b96ad' }}>UC San Diego · GPA 3.6 · 2024</span>
             </span>
           </div>
@@ -427,7 +427,7 @@ export default function Home() {
               <div style={{ fontFamily: JB, fontSize: 12, letterSpacing: '.14em', color: '#7fe9df', marginBottom: 16 }}>FEATURED · RAG · LLM · AI ENGINEERING</div>
               <h3 className="featured-h3" style={{ margin: '0 0 14px', fontSize: 32, fontWeight: 600, color: '#f3f7ff', letterSpacing: '-.02em' }}>RAG Optimization Playbook</h3>
               <p style={{ margin: '0 0 24px', fontSize: 17, lineHeight: 1.6, color: '#9aa6bd' }}>
-                A practitioner&apos;s reference for diagnosing and fixing production RAG systems — retrieval quality, agentic reasoning, reliability, scale, and eval pipelines. Each entry maps symptom → fix with tradeoffs and eval signals.
+                A practitioner&apos;s reference for diagnosing and fixing production RAG systems - retrieval quality, agentic reasoning, reliability, scale, and eval pipelines. Each entry maps symptom → fix with tradeoffs and eval signals.
               </p>
               <Tags tags={['RAG', 'LLM', 'System Design', 'Production ML']} />
               <div data-arrow style={{ fontSize: 15, fontWeight: 600, color: '#7fb0ff', transition: 'transform .3s' }}>view on github →</div>
@@ -509,7 +509,7 @@ export default function Home() {
       {/* ============ FOOTER ============ */}
       <footer style={{ borderTop: '1px solid rgba(255,255,255,.07)' }}>
         <div className="footer-inner" style={{ maxWidth: 1180, margin: '0 auto', padding: '36px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 18 }}>
-          <div style={{ fontWeight: 700, color: '#e7eefc' }}>nil beserler <span style={{ color: '#6b7691', fontWeight: 500 }}>— data scientist</span></div>
+          <div style={{ fontWeight: 700, color: '#e7eefc' }}>nil beserler <span style={{ color: '#6b7691', fontWeight: 500 }}>- data scientist</span></div>
           <div className="footer-links" style={{ display: 'flex', gap: 22 }}>
             {['about', 'experience', 'work', 'contact'].map(l => (
               <a key={l} href={`#${l}`} className="footer-link" style={{ fontSize: 14, color: '#8b96ad', transition: 'color .2s' }}>{l}</a>
@@ -553,25 +553,25 @@ function Tags({ tags }: { tags: string[] }) {
 
 const JOBS = [
   {
-    badge: 'NOW', date: 'Nov 2024 — Present', location: 'San Diego',
+    badge: 'NOW', date: 'Nov 2024 - Present', location: 'San Diego',
     title: 'Associate Data Scientist', company: 'ICW Group',
     desc: "Built WEFI, a workers'-comp loss-prediction system with 260+ engineered features and batch/live API architecture. Designed a CatBoost + SHAP benchmarking framework against actuarial baselines, and lifted NLP class-code → NAICS match coverage from 62% to 95%.",
     delay: 80,
   },
   {
-    badge: '', date: 'Jun — Oct 2024', location: 'Los Angeles',
+    badge: '', date: 'Jun - Oct 2024', location: 'Los Angeles',
     title: 'Data Science Intern', company: 'Oracle',
     desc: 'Built interactive Oracle Analytics Cloud dashboards for the Delete The Divide initiative, defined KPIs with executives, and compared classification & clustering models on SQL-based data pipelines.',
     delay: 120,
   },
   {
-    badge: '', date: 'Aug 2023 — Apr 2024', location: 'Los Angeles',
+    badge: '', date: 'Aug 2023 - Apr 2024', location: 'Los Angeles',
     title: 'Break Through Tech AI Fellow', company: 'Accenture',
     desc: 'Engineered durability, density & disaster-frequency features, applied PCA, and compared K-Means vs. DBSCAN (Silhouette 0.47) to turn cluster outputs into tiered investment priorities for US cellular infrastructure.',
     delay: 160,
   },
   {
-    badge: '', date: 'Dec 2021 — Dec 2022', location: 'San Diego',
+    badge: '', date: 'Dec 2021 - Dec 2022', location: 'San Diego',
     title: 'Research Assistant', company: 'UCSD Cognitive Tools Lab',
     desc: 'Compared CLIP, VGG19 & human perception metrics for image recognizability through dataset wrangling and visualization in R and Python; presented to 20+ grad students.',
     delay: 200,
@@ -583,8 +583,8 @@ const PROJECTS = [
     href: 'https://github.com/NilBeserler',
     img: '/flash_cards.jpg', alt: 'Fl(AI)shcards',
     category: 'AI / ML · 2024', categoryColor: '#7fe9df',
-    title: 'Fl(AI)shcards — AI Learning Assistant',
-    desc: "A GPT-4 flashcard assistant that reinvented studying for UCSD's LIGN167 — automated card generation, personalized study flow, and spaced repetition.",
+    title: 'Fl(AI)shcards - AI Learning Assistant',
+    desc: "A GPT-4 flashcard assistant that reinvented studying for UCSD's LIGN167 - automated card generation, personalized study flow, and spaced repetition.",
     tags: ['GPT-4', 'Python', 'Streamlit'],
     link: 'view project →',
     glowColor: 'rgba(127,233,223,.16)', cardClass: 'project-card-teal', delay: 120,
@@ -604,7 +604,7 @@ const PROJECTS = [
     img: '/plant_specimen.jpg', alt: 'Plant Specimen Classification',
     category: 'COMPUTER VISION · NYBG', categoryColor: '#8fb4ff',
     title: 'Plant Specimen Classification',
-    desc: 'VGG + ResNet50 categorizing 7.8M+ specimens with custom preprocessing — 0.9676 accuracy, 22nd of 77 teams.',
+    desc: 'VGG + ResNet50 categorizing 7.8M+ specimens with custom preprocessing - 0.9676 accuracy, 22nd of 77 teams.',
     tags: ['ResNet50', 'VGG', 'Deep Learning'],
     link: 'view project →',
     glowColor: 'rgba(91,140,255,.16)', cardClass: 'project-card-blue', delay: 220,
@@ -614,7 +614,7 @@ const PROJECTS = [
     img: '/discahrge_type.jpg', alt: 'Diabetes Discharge Prediction',
     category: 'HEALTHCARE ANALYTICS · 2023', categoryColor: '#ffc36b',
     title: 'Diabetes Discharge Prediction',
-    desc: 'Gradient Boosting on 100K+ hospital admissions to predict discharge type — 82% accuracy aimed at reducing readmissions.',
+    desc: 'Gradient Boosting on 100K+ hospital admissions to predict discharge type - 82% accuracy aimed at reducing readmissions.',
     tags: ['Gradient Boosting', 'scikit-learn', 'Pandas'],
     link: 'view on github →',
     glowColor: 'rgba(255,195,107,.14)', cardClass: 'project-card-gold', delay: 260,

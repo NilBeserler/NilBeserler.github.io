@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   openGraph: {
-    title: 'Nil Beserler — Data Scientist',
+    title: 'Nil Beserler - Data Scientist',
     description: 'Data scientist building ML systems, NLP pipelines, and analytics that turn data into decisions.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nil Beserler — Data Scientist',
+    title: 'Nil Beserler - Data Scientist',
     description: 'Data scientist building ML systems, NLP pipelines, and analytics that turn data into decisions.',
   },
 }
